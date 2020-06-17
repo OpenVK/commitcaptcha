@@ -1,0 +1,5 @@
+static: "static"
+
+routes:
+    - url: "captcha.webp"
+      handler: "Captcha->captcha"
