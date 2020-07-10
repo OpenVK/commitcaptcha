@@ -1,5 +1,5 @@
 <?php declare(strict_types=1);
-namespace captcha;
+namespace commitcaptcha;
 use Nette\Utils\Image;
 use Chandler\Session\Session;
 use Chandler\Patterns\TSimpleSingleton;
@@ -96,7 +96,7 @@ class CaptchaManager
     
     function verifyCaptcha(string $input): bool
     {
-        if(!CAPTCHA_ROOT_CONF["captcha"]["enable"])
+        if(!COMMITCAPTCHA_ROOT_CONF["commitcaptcha"]["enable"])
             return true;
         
         $data = $this->session->get("captcha");

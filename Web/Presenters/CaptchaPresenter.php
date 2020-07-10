@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
-namespace captcha\Web\Presenters;
+namespace commitcaptcha\Web\Presenters;
 use Chandler\MVC\SimplePresenter;
 use Nette\Utils\Image;
-use captcha\CaptchaManager;
+use commitcaptcha\CaptchaManager;
 
 class CaptchaPresenter extends SimplePresenter
 {

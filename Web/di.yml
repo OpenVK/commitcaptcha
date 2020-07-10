@@ -1,2 +1,2 @@
 services:
-    - captcha\Web\Presenters\CaptchaPresenter
+    - commitcaptcha\Web\Presenters\CaptchaPresenter
