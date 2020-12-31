@@ -94,10 +94,13 @@ class CaptchaManager
         return $image;
     }
     
-    function verifyCaptcha(string $input): bool
+    function verifyCaptcha(?string $input = NULL): bool
     {
         if(!COMMITCAPTCHA_ROOT_CONF["commitcaptcha"]["enable"])
             return true;
+        
+        if(!$input)
+            $input = $_POST["captcha"];
         
         $data = $this->session->get("captcha");
         if(!$data)
