@@ -14,8 +14,11 @@ HTML;
     return COMMITCAPTCHA_ROOT_CONF["commitcaptcha"]["enable"] ? $html : "You have already verified that you are not a robot.";
 }
 
-function check_captcha(?string $input): bool
+function check_captcha(?string $input = NULL): bool
 {
+    if(!$input)
+        $input = $_POST["captcha"] ?? 0;
+    
     return CaptchaManager::i()->verifyCaptcha((string) $input);
 }
 
