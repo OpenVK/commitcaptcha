@@ -25,7 +25,7 @@ class CaptchaManager
     
     private function generateCode(): string
     {
-        return str_replace("/", "+", base64_encode(openssl_random_pseudo_bytes(6)));
+        return mb_strtoupper(str_replace("/", "+", base64_encode(openssl_random_pseudo_bytes(6))));
     }
     
     private function applyNoiseOnImage(Image $image, \Closure $fun): void
