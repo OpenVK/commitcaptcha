@@ -1,3 +1,0 @@
-Mandatory extension for openvk - *CommitCAPTCHA*. It can be used outside of OVK tho.
-
-If this extensions makes you angry and you want to disable it you can do so in @captcha.yml@.
